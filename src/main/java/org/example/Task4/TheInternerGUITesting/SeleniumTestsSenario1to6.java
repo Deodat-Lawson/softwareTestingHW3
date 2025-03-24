@@ -16,7 +16,8 @@ public class SeleniumTestsSenario1to6 {
 
   public static void main(String[] args) {
     // Set the path to ChromeDriver (update this to your ChromeDriver location)
-    System.setProperty("webdriver.chrome.driver", "/usr/local/chromedriver/");
+    System.setProperty("webdriver.chrome.driver", "C:/Users/timot/Downloads/chromedriver-win64/chromedriver-win64" +
+        "/chromedriver.exe");
 
     // Configure Chrome options
     ChromeOptions options = new ChromeOptions();
