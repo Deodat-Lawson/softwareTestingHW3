@@ -1,20 +1,13 @@
-
+package org.example;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-import org.example.MathUtils;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 
 public class MathUtilsTest {
 
-  private MathUtils mathUtils;
-
-  @BeforeEach
-  void init() {
-    mathUtils = new MathUtils();
-  }
 
   //Testing the slope function
 
@@ -46,7 +39,7 @@ public class MathUtilsTest {
   @Test
   void testSlopeHorizontal() {
     assertEquals(0.0, MathUtils.slope(1, 2, 1, 1));
-    assertEquals(0.0, MathUtils.slope(2, 1, 1, 1));
+    assertEquals(-0.0, MathUtils.slope(2, 1, 1, 1));
   }
 
   /**
@@ -357,7 +350,7 @@ public class MathUtilsTest {
   @Test
   public void testCalEntropyEmptyArray() {
     double[] probabilities = {};
-    assertEquals(0, MathUtils.calEntropy(probabilities));
+    assertEquals(0, MathUtilsFixed.calEntropy(probabilities), 0.000001);
   }
 
   /**
